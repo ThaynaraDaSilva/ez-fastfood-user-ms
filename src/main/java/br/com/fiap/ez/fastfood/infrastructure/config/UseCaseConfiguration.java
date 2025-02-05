@@ -1,7 +1,7 @@
 package br.com.fiap.ez.fastfood.infrastructure.config;
 
-import br.com.fiap.ez.fastfood.application.usecases.CustomerUseCase;
-import br.com.fiap.ez.fastfood.domain.repository.CustomerRepository;
+import br.com.fiap.ez.fastfood.application.usecases.UserUseCase;
+import br.com.fiap.ez.fastfood.domain.repository.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 public class UseCaseConfiguration {
 
 	@Bean
-	public CustomerUseCase customerUseCase(CustomerRepository customerRepository) {
-		return new CustomerUseCase(customerRepository);
+	public UserUseCase userUseCase(UserRepository userRepository) {
+		return new UserUseCase(userRepository);
 	}
 }
