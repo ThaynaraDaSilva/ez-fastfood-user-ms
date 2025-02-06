@@ -1,10 +1,12 @@
 package br.com.fiap.ez.fastfood.application.dto;
 
-public class CreateUserDTO {
+import br.com.fiap.ez.fastfood.domain.model.User.UserType;
+
+public class UserRequestDTO {
 	private String name;
 	private String email;
-	private String cpf;
-	private String userType; // "CLIENT" ou "EMPLOYEE"
+	private String password;
+	private UserType userType; // "CLIENT" ou "EMPLOYEE"
 
 	// Getters e Setters
 	public String getName() {
@@ -23,19 +25,19 @@ public class CreateUserDTO {
 		this.email = email;
 	}
 
-	public String getCpf() {
-		return cpf;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getUserType() {
+	public UserType getUserType() {
 		return userType;
 	}
 
-	public void setUserType(String userType) {
+	public void setUserType(UserType userType) {
 		this.userType = userType;
 	}
 }

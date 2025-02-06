@@ -1,5 +1,7 @@
 package br.com.fiap.ez.fastfood.adapters.in.controller;
 
+import br.com.fiap.ez.fastfood.application.dto.UserRequestDTO;
+import br.com.fiap.ez.fastfood.application.dto.UserResponseDTO;
 import br.com.fiap.ez.fastfood.application.usecases.UserUseCase;
 import br.com.fiap.ez.fastfood.domain.model.User;
 import lombok.RequiredArgsConstructor;
@@ -16,8 +18,9 @@ public class UserController {
     private final UserUseCase userUseCase;
 
     @PostMapping
-    public ResponseEntity<User> registerUser(@RequestBody User user) {
-        return ResponseEntity.ok(userUseCase.registerUser(user));
+    public ResponseEntity<UserResponseDTO> registerUser(@RequestBody UserRequestDTO userRequestDTO) {
+        UserResponseDTO userResponseDTO = userUseCase.registerUser(userRequestDTO);
+        return ResponseEntity.ok(userResponseDTO);
     }
 
     @GetMapping("/{email}")

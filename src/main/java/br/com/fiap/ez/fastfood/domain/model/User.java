@@ -13,12 +13,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
     @Id
     private String id;
-    private String nome;
+    private String name;
     private String email;
-    private String senha;
-    private TipoUsuario tipo; // CLIENTE ou FUNCIONARIO
+    private String password;
+    private UserType userType; // CLIENTE ou FUNCIONARIO
 
-    public enum TipoUsuario {
+    public enum UserType {
         CLIENTE, FUNCIONARIO
     }
 }
