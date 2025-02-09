@@ -5,6 +5,7 @@ import br.com.fiap.ez.fastfood.domain.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -21,5 +22,15 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public Optional<User> findByEmail(String email) {
         return mongoUserRepository.findByEmail(email);
+    }
+
+    @Override
+    public Optional<User> findByCpf(String cpf) {
+        return mongoUserRepository.findByCpf(cpf);
+    }
+
+    @Override
+    public List<User> findAll() {
+        return mongoUserRepository.findAll();
     }
 }

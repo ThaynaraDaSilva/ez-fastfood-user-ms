@@ -1,6 +1,6 @@
 package br.com.fiap.ez.fastfood.infrastructure.persistence;
 
-import br.com.fiap.ez.fastfood.domain.model.User.TipoUsuario;
+import br.com.fiap.ez.fastfood.domain.model.User.UserType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
@@ -12,8 +12,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class UserEntity {
     @Id
     private String id;
-    private String nome;
+    private String cpf;
+    private String name;
     private String email;
-    private String senha;
-    private TipoUsuario tipo;
+    private String password;
+    private UserType userType;
 }
