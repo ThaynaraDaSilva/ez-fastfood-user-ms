@@ -13,6 +13,10 @@ import java.util.Optional;
 public class UserRepositoryImpl implements UserRepository {
 
     private final MongoUserRepository mongoUserRepository;
+    
+    public UserRepositoryImpl(MongoUserRepository mongoUserRepository) {
+		this.mongoUserRepository = mongoUserRepository;
+	}
 
     @Override
     public User save(User user) {

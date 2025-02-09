@@ -4,7 +4,6 @@ import br.com.fiap.ez.fastfood.application.dto.UserRequestDTO;
 import br.com.fiap.ez.fastfood.application.dto.UserResponseDTO;
 import br.com.fiap.ez.fastfood.application.usecases.UserUseCase;
 import br.com.fiap.ez.fastfood.domain.model.User;
-import br.com.fiap.ez.fastfood.frameworks.exception.BusinessException;
 import br.com.fiap.ez.fastfood.frameworks.exception.ErrorResponse;
 import io.swagger.v3.oas.annotations.Hidden;
 import io.swagger.v3.oas.annotations.Operation;
@@ -15,7 +14,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,7 +27,12 @@ import java.util.Optional;
 public class UserController {
 
     private final UserUseCase userUseCase;
-
+    
+    public UserController(UserUseCase userUseCase) {
+		this.userUseCase = userUseCase;
+	}
+    
+    
     @Operation(summary = "Create a new user")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "User created"),
