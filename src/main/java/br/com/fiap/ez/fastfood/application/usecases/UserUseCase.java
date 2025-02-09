@@ -1,16 +1,15 @@
 package br.com.fiap.ez.fastfood.application.usecases;
 
+import java.util.List;
+import java.util.Optional;
+
 import br.com.fiap.ez.fastfood.application.dto.UserRequestDTO;
 import br.com.fiap.ez.fastfood.application.dto.UserResponseDTO;
 import br.com.fiap.ez.fastfood.domain.model.User;
 import br.com.fiap.ez.fastfood.domain.repository.UserRepository;
 import br.com.fiap.ez.fastfood.frameworks.exception.BusinessException;
-import lombok.RequiredArgsConstructor;
 
-import java.util.List;
-import java.util.Optional;
 
-@RequiredArgsConstructor
 public class UserUseCase {
 
     private final UserRepository userRepository;

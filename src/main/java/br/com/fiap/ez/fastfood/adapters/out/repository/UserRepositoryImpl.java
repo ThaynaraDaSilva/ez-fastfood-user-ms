@@ -1,15 +1,15 @@
 package br.com.fiap.ez.fastfood.adapters.out.repository;
 
+
+import org.springframework.stereotype.Repository;
+
 import br.com.fiap.ez.fastfood.domain.model.User;
 import br.com.fiap.ez.fastfood.domain.repository.UserRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
-@RequiredArgsConstructor
 public class UserRepositoryImpl implements UserRepository {
 
     private final MongoUserRepository mongoUserRepository;
