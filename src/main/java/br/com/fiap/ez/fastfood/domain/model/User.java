@@ -1,13 +1,13 @@
 package br.com.fiap.ez.fastfood.domain.model;
 
 
-import org.springframework.data.annotation.Id;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
 @Document(collection = "users")  // Define a collection no MongoDB
 public class User {
-    @Id
+ 
     private Long id;
     private String cpf;
     private String name;
@@ -19,11 +19,13 @@ public class User {
         CLIENTE, FUNCIONARIO
     }
 
-	public String getId() {
+	
+
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
