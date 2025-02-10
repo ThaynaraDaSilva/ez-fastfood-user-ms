@@ -1,6 +1,6 @@
-db = db.getSiblingDB('ez-fastfood');
+db = db.getSiblingDB('ez_fastfood_user');
 
-db.createCollection('users');
+db.createCollection('user');
 
 db.users.insertMany([
     {
