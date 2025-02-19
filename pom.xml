@@ -5,7 +5,7 @@
   <groupId>br.com.fiap</groupId>
   <artifactId>ez-fastfood-user-ms</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>ez-fast-food-user</name>
+  <name>ez-fastfood-user</name>
   <description>ez-fastfood-user-ms</description>
   <packaging>jar</packaging>
 
@@ -20,8 +20,15 @@
     <java.version>17</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <project.build.sourceEncondig>UTF-8</project.build.sourceEncondig>
-    <project.reporting.outputEncondig>UTF-8</project.reporting.outputEncondig>
+    <project.build.sourceEncodig>UTF-8</project.build.sourceEncodig>
+    <project.reporting.outputEncodig>UTF-8</project.reporting.outputEncodig>
+    
+    
+     <sonar.projectKey>ThaynaraDaSilva_ez-fastfood-user-ms</sonar.projectKey>
+    <sonar.organization>ez-fastfood</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.coverage.jacoco.xmlReportPaths>
+      ${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
   </properties>
 
   <profiles>
