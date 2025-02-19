@@ -103,19 +103,6 @@
       <artifactId>spring-boot-starter-data-mongodb</artifactId>
     </dependency>
 
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <version>5.9.3</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.9.3</version> <!-- You can use the latest version -->
-      <scope>test</scope>
-    </dependency>
-
     <!-- Dependencia adicionada para httpclients -->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
