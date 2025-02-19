@@ -5,7 +5,6 @@ on:
     branches:
       - develop
       - main
-      - feature/update-pipeline-template
 
 env:
   JAVA_VERSION: '17'
